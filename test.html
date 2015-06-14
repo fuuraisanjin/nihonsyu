@@ -49,7 +49,13 @@
                     </div>
                     <!-- チャット -->
                     <div class="chat">
-
+                        <ul id="chat_board"></ul>
+                        <p>message：</p>
+                        <textarea name="" id="msg" cols="30" rows="1"></textarea>
+                        <form id="chat_user_name">
+                            <p>name：</p><input type="text" value="">
+                        </form>
+                        <button class="btn btn-info btn-sm" name="button" onClick="clickEvent()">送信</button>
                     </div>
                 </div>
 
@@ -80,13 +86,7 @@
                     </div>
                     <!-- チャット -->
                     <div class="chat">
-                        <ul id="chat_board"></ul>
-                        <p>message：</p>
-                        <textarea name="" id="msg" cols="30" rows="1"></textarea>
-                        <form id="chat_user_name">
-                            <p>name：</p><input type="text" value="">
-                        </form>
-                        <button name="button" onClick="clickEvent()">送信</button>
+                        
                     </div>
                 </div>
 
