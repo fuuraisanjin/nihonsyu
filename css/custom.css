@@ -17,17 +17,31 @@
 	height: 200px;
 	overflow:scroll;
 }
+.card-line	 {
+	border-top: 1px solid lightgray;
+}
+.actions {
+	margin-top: 10px;
+}
+.rank {
+	font-size: 2rem;
+}
+.present-num {
+	margin: 0 1rem;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
 
+/*汎用*/
 .clearLeft {
 	clear: left;
 }
-
-.card .card-image img {
-	width: 100px;
-	height: 100px;
+.margin-top-10 {
+	margin-top: 10px;
 }
-
-
 .text-align-center {
 	text-align: center;
 } 
+.font-size-20 {
+	font-size: 40px;
+}
