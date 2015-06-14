@@ -1,0 +1,33 @@
+.shop-info {
+	height: 200px;
+	border: 1px solid black;
+}
+.supporter {
+	height: 300px;
+	border: 1px solid black;
+}
+.name {
+	font-size: 2rem;
+}
+.icon {
+	width: 100px;
+}
+.introduce {
+	padding: 5px;
+	height: 200px;
+	overflow:scroll;
+}
+
+.clearLeft {
+	clear: left;
+}
+
+.card .card-image img {
+	width: 100px;
+	height: 100px;
+}
+
+
+.text-align-center {
+	text-align: center;
+} 
