@@ -11,6 +11,8 @@
 
 
         <link href="css/custom.css" rel="stylesheet">
+        <link href="css/chart.css" rel="stylesheet">
+        <link href="css/c3.css" rel="stylesheet">
 
     </head>
 
@@ -20,6 +22,15 @@
             <div class="shop-info">
 
             </div>
+
+            <div class="chart-area">
+                <p class="title">グラフを見る</p>
+                <div class="chart-contents">
+                    <div id="chart"></div>
+                </div>
+            </div>
+
+
             <!-- サポーター -->
             <div class="row">
                 <div class="col-md-4">
@@ -42,7 +53,7 @@
                                 <div class="card-line margin-top-10">テーマ：<a>日本酒を飲みながらやるハッカソン</a></div>
 
                                 <div class="actions">
-                                    <div class="mdi-action-favorite mdi-material-red pull-right font-size-20"></div>
+                                    <div class="mdi-action-favorite mdi-material-red pull-right font-size-20 chart-btn kato"></div>
                                 </div>
                             </div>
                         </div>
@@ -86,7 +97,7 @@
                     </div>
                     <!-- チャット -->
                     <div class="chat">
-                        
+
                     </div>
                 </div>
 
@@ -123,7 +134,7 @@
             </div>
 
 
-            
+
 
         <!-- Your site ends -->
 
@@ -140,6 +151,74 @@
                 // This command is used to initialize some elements and make them work properly
                 $.material.init();
             });
+        </script>
+        <script src="js/d3.min.js"></script>
+        <script src="js/c3.min.js"></script>
+        <script>
+        var chartData = [
+        	['x', '2015-06-08', '2015-06-09', '2015-06-10', '2015-06-11', '2015-06-12', '2015-06-13', '2015-06-14'],
+        	['加藤', 2, 6, 9, 12, 8, 10, 5],
+        	['三松', 0, 5, 3, 7, 5, 8, 4],
+            ['田中', 0, 3, 2, 0, 1, 4, 2]
+        ];
+
+        function draw(){
+        	var chart = c3.generate({
+        		data: {
+        			x: 'x',
+        	//        xFormat: '%Y%m%d', // 'xFormat' can be used as custom format of 'x'
+
+        			columns: chartData
+
+        		},
+        		axis: {
+        			x: {
+        				type: 'timeseries',
+        				tick: {
+        					format: '%Y-%m-%d'
+        				}
+        			}
+        		}
+        	});
+        }
+        /*
+        var chartData = [
+        	['data1', 30, 200, 100, 400, 150, 250],
+        	['data2', 50, 20, 10, 40, 15, 25]
+        ];
+        var chart = c3.generate({
+        	data: {
+        		columns: chartData
+        	}
+        });
+        */
+        </script>
+        <script>
+        $(function () {
+        	draw();
+        	$(".chart-btn.kato").click(function () {
+        		console.log("clicked");
+        		chartData[1][7] = chartData[1][7] + 1;
+        		draw();
+        	});
+        	$(".chart-btn.mimatsu").click(function () {
+        		console.log("clicked");
+        		chartData[2][7] = chartData[2][7] + 1;
+        		draw();
+        	});
+            $(".chart-btn.tanaka").click(function () {
+        		console.log("clicked");
+        		chartData[3][7] = chartData[3][7] + 1;
+        		draw();
+        	});
+
+            // アコーディオン
+            $(".chart-contents").hide();
+
+            $(".chart-area .title").click(function () {
+              $(".chart-contents").slideToggle();
+            });
+        });
         </script>
 
     </body>
