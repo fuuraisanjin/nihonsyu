@@ -45,7 +45,7 @@
      <div class="container">
       <h1>郷土料理 こいのぼり</h1>
       <p>114-0077<br>品川区東品川3-44-2</p>
-     </div> <!-- /container -->    
+     </div> <!-- /container -->
     </div>
 
 
@@ -67,7 +67,7 @@
                             <div class="card-body">
                                 <div class="rank">
                                     <span>1位</span>
-                                    <span class="badge">100</span>
+                                    <span class="badge">52</span>
                                 </div>
 
                                 <div class="text-align-center">
@@ -99,13 +99,13 @@
 
                 <div class="col-md-4">
                     <!-- カード -->
-                    <div class="card">
+                    <div class="card" id="user-02">
                         <div class="card-height-indicator"></div>
                         <div class="card-content">
                             <div class="card-body">
                                 <div class="rank">
                                     <span>2位</span>
-                                    <span class="badge">100</span>
+                                    <span class="badge">32</span>
                                 </div>
 
                                 <div class="text-align-center">
@@ -130,13 +130,13 @@
 
                 <div class="col-md-4">
                     <!-- カード -->
-                    <div class="card">
+                    <div class="card" id="user-03">
                         <div class="card-height-indicator"></div>
                         <div class="card-content">
                             <div class="card-body">
                                 <div class="rank">
                                     <span>3位</span>
-                                    <span class="badge">100</span>
+                                    <span class="badge">12</span>
                                 </div>
 
                                 <div class="text-align-center">
@@ -208,41 +208,43 @@
         		}
         	});
         }
-        /*
-        var chartData = [
-        	['data1', 30, 200, 100, 400, 150, 250],
-        	['data2', 50, 20, 10, 40, 15, 25]
-        ];
-        var chart = c3.generate({
-        	data: {
-        		columns: chartData
-        	}
-        });
-        */
         </script>
         <script>
         $(function () {
         	draw();
-        	$(".chart-btn.kato").click(function () {
+        	$("#user-01 .chart-btn").click(function () {
         		console.log("clicked");
         		chartData[1][7] = chartData[1][7] + 1;
+
+                var present = $("#user-01 .badge").text();
+                $("#user-01 .badge").text((Number(present) + 1));
+                //console.log(Number(present) + 1);
+
         		draw();
 
                 $(this).stop().animate({fontSize:'60px'}, 300).animate({fontSize:'40px'}, 300);
+                $('#user-01 .bubble').show(500);
+                setTimeout(function(){
+                    $('#user-01 .bubble').hide();
+                }, 2000);
 
                 // $(this).addClass('animated pulse');
                 // $(this).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                 //     $(this).removeClass('animated pulse');
                 // });
         	});
-        	$(".chart-btn.mimatsu").click(function () {
+        	$("#user-02 .chart-btn").click(function () {
         		console.log("clicked");
         		chartData[2][7] = chartData[2][7] + 1;
+                var present = $("#user-02 .badge").text();
+                $("#user-02 .badge").text((Number(present) + 1));
         		draw();
         	});
-            $(".chart-btn.tanaka").click(function () {
+            $("#user-03 .chart-btn").click(function () {
         		console.log("clicked");
         		chartData[3][7] = chartData[3][7] + 1;
+                var present = $("#user-03 .badge").text();
+                $("#user-03 .badge").text((Number(present) + 1));
         		draw();
         	});
 
