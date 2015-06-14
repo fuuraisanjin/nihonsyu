@@ -1,0 +1,22 @@
+body {font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;}
+.navbar.navbar, .navbar-default.navbar {
+	background-color: #E0DB00;
+}
+
+.navbar-brand {
+  background: url("../img/logo.png") no-repeat left center;
+  background-size: contain;
+  height: 371px;
+}
+
+.jumbotron {
+  background-image: url("../img/omise_pic.jpg");
+  background-size: cover;
+  background-position: top left;
+  margin-top: 78px;
+}
+
+.jumbotron h1 , .jumbotron p {
+  color: #FFFFFF;
+
+}
