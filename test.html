@@ -7,6 +7,8 @@
         <link href="css/roboto.min.css" rel="stylesheet">
         <link href="css/material.min.css" rel="stylesheet">
         <link href="css/ripples.min.css" rel="stylesheet">
+        <link href="css/chat.css" rel="stylesheet">
+
 
         <link href="css/custom.css" rel="stylesheet">
 
@@ -78,7 +80,13 @@
                     </div>
                     <!-- チャット -->
                     <div class="chat">
-
+                        <ul id="chat_board"></ul>
+                        <p>message：</p>
+                        <textarea name="" id="msg" cols="30" rows="1"></textarea>
+                        <form id="chat_user_name">
+                            <p>name：</p><input type="text" value="">
+                        </form>
+                        <button name="button" onClick="clickEvent()">送信</button>
                     </div>
                 </div>
 
@@ -121,6 +129,9 @@
 
         <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="http://cdn.mlkcca.com/v2.0.0/milkcocoa.js"></script>
+        <script src="js/chat.js"></script>
+
 
         <script src="js/ripples.min.js"></script>
         <script src="js/material.min.js"></script>
