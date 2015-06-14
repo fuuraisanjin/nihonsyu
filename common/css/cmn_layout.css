@@ -1,0 +1,293 @@
+@charset "UTF-8";
+/*
+ * cmn_layout.css
+ */
+
+/* !Reseting
+---------------------------------------------------------- */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video
+{ margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+body
+{ line-height: 1;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
+{ display: block;}
+ol, ul
+{ list-style: none;}
+blockquote, q
+{ quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after
+{ content: ''; content: none;}
+a
+{ margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+ins
+{ background-color: #ff9; color: #000; text-decoration: none;}
+mark
+{ background-color: #ff9; color: #000; font-style: italic; font-weight: bold;}
+del
+{ text-decoration: line-through;}
+abbr[title], dfn[title]
+{ border-bottom: 1px dotted; cursor: help;}
+table
+{ border-collapse: collapse; border-spacing: 0;}
+hr
+{ display: block;height: 1px; border: 0; border-top: 1px solid #cccccc; margin: 1em 0; padding: 0;}
+input, select
+{ vertical-align: middle;}
+img
+{ vertical-align: top;font-size:0;line-height: 0; }
+*
+{ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box;}
+/* !Clearfix
+---------------------------------------------------------- */
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+}
+ 
+/* For IE 6/7 (trigger hasLayout) */
+.clearfix {
+    zoom:1;
+}
+/* !Layout
+---------------------------------------------------------- */
+body {
+	font-family: Quicksand, 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+	font-size: 14px;
+	-webkit-text-size-adjust: none;
+	line-height: 1.5;
+	color: #f00;
+}
+/* !wrapper
+---------------------------------------------------------- */
+#wrapper {
+}
+@media screen and (max-width:767px){
+#wrapper {
+}
+}
+/* !header
+---------------------------------------------------------- */
+#header {
+}
+	#headerIn {
+	}
+		#headerLogo {
+		}
+		#headerUtility {
+		}
+			#headerSearch {
+			}
+			#headerLinks {
+			}
+				#headerLinks li {
+				}
+@media screen and (max-width:767px){
+#header {
+}
+}
+/* !gNavi
+---------------------------------------------------------- */
+#gNavi {
+}
+	#gNavi ul {
+	}
+		#gNavi ul li {
+		}
+			#gNavi ul li a {
+			}
+			#gNavi li a:hover,
+			#gNavi li a:focus {
+			}
+@media screen and (max-width:767px){
+#gNavi {
+}
+}
+/* !breadcrumb
+---------------------------------------------------------- */
+#breadcrumb {
+	overflow: hidden;
+	*zoom: 1;
+}
+	#breadcrumb li {
+		float: left;
+		white-space: nowrap;
+	}
+	#breadcrumb li.home {
+	}
+		#breadcrumb li a {
+			white-space: nowrap;
+		}
+@media screen and (max-width:767px){
+#breadcrumbWrap {
+}
+}
+/* !mainimg
+---------------------------------------------------------- */
+#mainimg {
+}
+@media screen and (max-width:767px){
+#mainimg span {
+}
+}
+/* !contents
+---------------------------------------------------------- */
+#contents {
+}
+	#main {
+	}
+	#sub {
+	}
+@media screen and (max-width:767px){
+#contents {
+}
+	#main {
+	}
+	#sub {
+	}
+}
+/* !lNavi
+---------------------------------------------------------- */
+#lNavi {
+}
+	#lNavi ul {
+	}
+		#lNavi ul li {
+		}
+			#lNavi ul li a {
+			}
+@media screen and (max-width:767px){
+#lNavi {
+}
+}
+/* !pageTop
+---------------------------------------------------------- */
+.pageTop {
+}
+	.pageTop a {
+	}
+@media screen and (max-width:767px){
+.pageTop {
+}
+}
+/* !footer
+---------------------------------------------------------- */
+#footer {
+}
+	#footerIn {
+	}
+		#footerLinks {
+		}
+			#footerLinks li {
+			}
+		#copyright {
+		}
+@media screen and (max-width:767px){
+#footer {
+}
+}
+/* !h(n)eading
+---------------------------------------------------------- */
+.tit_basic01 {}
+.tit_basic02 {}
+.tit_basic03 {}
+.tit_basic04 {}
+.tit_basic05 {}
+.tit_basic06 {}
+@media screen and (max-width:767px){
+.tit_basic01 {}
+.tit_basic02 {}
+.tit_basic03 {}
+.tit_basic04 {}
+.tit_basic05 {}
+.tit_basic06 {}
+}
+/* !Listing
+---------------------------------------------------------- */
+.list_basic01 {
+}
+	.list_basic01 li {
+	}
+.list_order01 {
+}
+	.list_order01 li {
+	}
+@media screen and (max-width:767px){
+.list_order01 {
+}
+}
+@media screen and (max-width:767px){
+.list_basic01 {
+}
+}
+.list_dl01 {
+}
+	.list_dl01 dt {
+	}
+	.list_dl01 dd {
+	}
+@media screen and (max-width:767px){
+.list_dl01 {
+}
+	.list_dl01 dt {
+	}
+	.list_dl01 dd {
+	}
+}
+/* !Table
+---------------------------------------------------------- */
+.table_basic01 {
+}
+	.table_basic01 th,
+	.table_basic01 td {
+	}
+	.table_basic01 th {
+	}
+	.table_basic01 td {
+	}
+@media screen and (max-width:767px){
+.table_basic01 {
+}
+	.table_basic01 th,
+	.table_basic01 td {
+	}
+	.table_basic01 th {
+	}
+	.table_basic01 td {
+	}
+}
+/* !Section
+---------------------------------------------------------- */
+.sectionLv01,
+.sectionLv02,
+.sectionLv03 {
+}
+
+.sectionLv01 {}
+.sectionLv02 {}
+.sectionLv03 {}
+section[class^="section"]:last-child {}
+@media screen and (max-width:767px){
+.sectionLv01,
+.sectionLv02,
+.sectionLv03 {
+}
+.sectionLv01 {}
+.sectionLv02 {}
+.sectionLv03 {}
+}
