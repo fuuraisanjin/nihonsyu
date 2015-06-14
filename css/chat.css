@@ -1,0 +1,29 @@
+body{
+    font-family: "メイリオ", sans-serif;
+    padding: 5px;
+}
+
+#chat_user_name{
+    margin: 5px 0px;
+    padding: 2px 0px;
+}
+
+#chat_board{
+    width: 350px;
+    height: 250px;
+    overflow-y: scroll;
+    margin: 5px 0px;
+}
+
+#chat_board li{
+    font-size: 5px;
+    height: 40px;
+    width:250px;
+    border-top:1px dotted #696969;
+    padding: 2px 0px;
+    list-style-type: none;
+}
+
+.message{
+    font-size: 15px;
+}
