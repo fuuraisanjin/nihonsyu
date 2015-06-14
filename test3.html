@@ -1,0 +1,145 @@
+<html>
+
+    <head>
+
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Include roboto.css to use the Roboto web font, material.css to include the theme and ripples.css to style the ripple effect -->
+        <link href="css/roboto.min.css" rel="stylesheet">
+        <link href="css/material.min.css" rel="stylesheet">
+        <link href="css/ripples.min.css" rel="stylesheet">
+
+        <link href="css/custom.css" rel="stylesheet">
+        <link href="css/chart.css" rel="stylesheet">
+        <link href="css/c3.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- お店情報 -->
+            <div class="shop-info">
+
+            </div>
+
+            <div class="chart-area">
+                <p class="title">グラフを見る</p>
+                <div class="chart-contents">
+                    <div id="chart"></div>
+                </div>
+            </div>
+
+            <!-- サポーター -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+
+                        <div class="card-height-indicator"></div>
+
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="text-align-center">
+                                    <img class="img-circle icon" src="img/brokiga.jpeg" alt="Loading image...">
+                                    <div class="name">加藤　健太郎</div>
+                                </div>
+                                <div class="date">6/14(日) 18:00〜</div>
+                                <div class="">参加者<span class="present-num">8/12</span>人</div>
+
+                                <div class="mdi-action-favorite mdi-material-red chart-btn kato"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- チャット -->
+                    <div class="chat">
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        <!-- Your site ends -->
+
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+        <script src="js/ripples.min.js"></script>
+        <script src="js/material.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                // This command is used to initialize some elements and make them work properly
+                $.material.init();
+            });
+        </script>
+        <script src="js/d3.min.js"></script>
+        <script src="js/c3.min.js"></script>
+        <script>
+        var chartData = [
+        	['x', '2015-06-08', '2015-06-09', '2015-06-10', '2015-06-11', '2015-06-12', '2015-06-13', '2015-06-14'],
+        	['加藤', 2, 6, 9, 12, 8, 10, 5],
+        	['三松', 0, 5, 3, 7, 5, 8, 4],
+            ['田中', 0, 3, 2, 0, 1, 4, 2]
+        ];
+
+        function draw(){
+        	var chart = c3.generate({
+        		data: {
+        			x: 'x',
+        	//        xFormat: '%Y%m%d', // 'xFormat' can be used as custom format of 'x'
+
+        			columns: chartData
+
+        		},
+        		axis: {
+        			x: {
+        				type: 'timeseries',
+        				tick: {
+        					format: '%Y-%m-%d'
+        				}
+        			}
+        		}
+        	});
+        }
+        /*
+        var chartData = [
+        	['data1', 30, 200, 100, 400, 150, 250],
+        	['data2', 50, 20, 10, 40, 15, 25]
+        ];
+        var chart = c3.generate({
+        	data: {
+        		columns: chartData
+        	}
+        });
+        */
+        </script>
+        <script>
+        $(function () {
+        	draw();
+        	$(".chart-btn.kato").click(function () {
+        		console.log("clicked");
+        		chartData[1][7] = chartData[1][7] + 1;
+        		draw();
+        	});
+        	$(".chart-btn.mimatsu").click(function () {
+        		console.log("clicked");
+        		chartData[2][7] = chartData[2][7] + 1;
+        		draw();
+        	});
+            $(".chart-btn.tanaka").click(function () {
+        		console.log("clicked");
+        		chartData[3][7] = chartData[3][7] + 1;
+        		draw();
+        	});
+
+            // アコーディオン
+            $(".chart-contents").hide();
+
+            $(".chart-area .title").click(function () {
+              $(".chart-contents").slideToggle();
+            });
+        });
+        </script>
+    </body>
+
+</html>
